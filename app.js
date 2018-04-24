@@ -7,8 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var server_port = process.env.PORT || 3000;
-var server_ip_address = process.env.IP || '127.0.0.1';
+var server_port = process.env.PORT || 5000;
 
 var app = express();
 
@@ -28,8 +27,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
-app.listen(server_port, server_ip_address, function () {
-  console.log( "Listening on " + server_ip_address + ", port " + server_port )
+app.listen(server_port, function () {
+  console.log( "Listening on port " + server_port )
 });
 
 // catch 404 and forward to error handler
