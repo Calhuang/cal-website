@@ -1,0 +1,80 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title Calvin Huang
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400', rel='stylesheet')
+    link(rel='stylesheet', href='/javascripts/animate.min.css')
+    link(rel='stylesheet', href='/stylesheets/stylesheet.css', type='text/css')
+    script(src='/javascripts/web.js')
+    script(src='/javascripts/hsluv-0.0.3.min.js')
+  body
+    #navbar_container
+      #navbar
+        .animated.zoomIn.aninine
+          img#profile(src='images/prof.png', onmousemove='showCoords(event)', onmouseout='clearCoor()')
+        ul#navbar_ul
+          li.navbar_li.animated.fadeInLeft.anione
+            .text_hover
+              a#home_nav(href='#home') Home
+          li.navbar_li.animated.fadeInLeft.anitwo
+            .text_hover
+              a#projects_nav(href='#projects') Projects
+          li.navbar_li.animated.fadeInLeft.anithree
+            .text_hover
+              a#aboutme_nav(href='#aboutme') Resume
+          li#aboutme_hide.navbar_li.animated.fadeInLeft.anifour
+            .text_hover
+              a#contact_nav(href='#contact') Contact
+        #social_nav
+          li.social.animated.fadeInLeft.anifive
+            .social_hover
+              a#social_link1(href='https://www.linkedin.com/in/calhuang1/', target='_blank')
+                img(src='images/linkedin.png ', alt='Linked In ', width='32px ', height='32px ')
+                |  Linkedin
+          li.social.animated.fadeInLeft.anisix
+            .social_hover
+              a#social_link2(href='https://github.com/Calhuang', target='_blank')
+                img(src='images/github.png ', alt='Git Hub ', width='32px ', height='32px ')
+                |  Github
+          li.social.animated.fadeInLeft.aniseven
+            .social_hover
+              a#social_link2(href='mailto:calhuang@ucdavis.edu')
+                img(src='images/gmail.png ', alt='Email ', width='32px ', height='32px ')
+                |  Email
+        #button_cb.social.animated.bounceInUp.anieight(onclick='changeColor()')
+          img#button_cb2(src='images/refresh_icon_w.png', width='32px', height='32px')
+          //
+            <div class='social animated bounceInUp anieight' id='button_ha' onclick="hardwareAccel()"><img src="images/refresh_icon_w.png" width="32px" height="32px" id='button_ha2'></img>
+            </div>
+    #info_box.animated.bounceInUp
+      .text.animated.fadeIn
+        .text_box
+          h1#home  Home
+          .text_box2
+            p#home_text
+              | Hello! My name is Calvin Huang, and I’m currently looking for a job in the Computer Science field. I have a Bachelor’s degree in Computer Science. I enjoy using technology as well as making my own. Some of my achievements include building a
+              | MacOS app for automating brightness and constructing a mechanical keyboard from scratch. Right now, I am focusing on developing an iOS app so stay tuned for that!
+        .text_box
+          h1#projects Projects
+          .text_box2
+            p#projects_text
+              | You can find some of my prominent projects here. There are more projects listed on my Github, so please take a look at those as well!
+            #gitcards
+              .github-card(data-github='Calhuang/Brght', data-width='800', data-height='', data-theme='medium')
+              script(src='https://cdn.jsdelivr.net/github-cards/latest/widget.js')
+              .github-card(data-github='Calhuang/block-it', data-width='800', data-height='', data-theme='medium')
+              script(src='https://cdn.jsdelivr.net/github-cards/latest/widget.js')
+              .github-card(data-github='Calhuang/Photo-web-app', data-width='800', data-height='314', data-theme='medium')
+              script(src='https://cdn.jsdelivr.net/github-cards/latest/widget.js')
+            // <p>Credits to @lepture for the Github cards.</p>
+        .text_box
+          h1#aboutme Resume
+          .text_box2
+            p#aboutme_text
+              a(href='images/resume.pdf')
+                img#resume(src='images/resume-min.png')
+        #aboutme_hide.text_box
+          h1#contact Contact
+          .text_box2
+            p#contact_text Coming soon...
